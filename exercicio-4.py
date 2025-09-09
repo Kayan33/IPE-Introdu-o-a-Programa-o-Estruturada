@@ -239,7 +239,7 @@ if (branco1>branco2
     and branco1>branco8
     and branco1>branco9
     and branco1>branco10):
-    mais_branco = (nome_muni, branco1, porc_branco1)
+    mais_branco = (nome_muni1, branco1, porc_branco1)
 elif (branco2>branco1
     and branco2>branco3
     and branco2>branco4
