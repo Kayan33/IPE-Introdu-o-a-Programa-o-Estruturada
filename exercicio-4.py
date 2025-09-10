@@ -13,13 +13,15 @@ porc_validos = porc_validos1 = porc_validos2 = porc_validos3 = porc_validos4 = p
 
 #laço para os 10 municipios
 for i in range (10):
-    print(f'-----Município {i+1}-----')
-
-    nome_muni = input(f'Nome: ')
-    eleitor = int(input(f'Total eleitores: '))
-    branco = int(input(f'Total votos em branco: '))
-    nulo = int(input(f'Total votos nulos: '))
-    validos = int(input(f'Total votos válidos: '))
+    
+    print(f"\n{'.'*80}")
+    print(f"\n{f'  MUNICÍPIO {i+1}':^80}")
+    nome_muni = input(f'  Nome do Município: ')
+    eleitor = int(input(f'  Total de eleitores: '))
+    branco = int(input(f'  Total de votos em branco: '))
+    nulo = int(input(f'  Total de votos nulos: '))
+    validos = int(input(f'  Votos válidos: '))
+    print(f"\n{'.'*80}")
 
     
     #estabelecendo porcentagem por variável
@@ -120,21 +122,19 @@ for i in range (10):
         porc_nulo10 = porc_nulo
         porc_validos10 = porc_validos
 
-    #printando dados de cada município
-    print(f'|---------------------------------------------------------------------------------------------|')
-    print(f'| Município: {nome_muni.upper():<81}|')                                                           
-    print(f'|---------------------------------------------------------------------------------------------|')
-    print(f'|            TOTAIS            |          QUANTIDADE           |          PORCENTAGEM         |')
-    print(f'|------------------------------|-------------------------------|------------------------------|')
-    print(f'| Eleitores:                   |           {eleitor:<19} |             {porc_branco+porc_nulo+porc_validos:.2f}%          |')
-    print(f'|------------------------------|-------------------------------|------------------------------|')
-    print(f'| Votos em branco:             |           {branco:<18}  |{porc_branco:>18.2f}%           |')
-    print(f'|------------------------------|-------------------------------|------------------------------|')
-    print(f'| Votos nulos:                 |           {nulo:<16}    |{porc_nulo:>18.2f}%           |')
-    print(f'|------------------------------|-------------------------------|------------------------------|')
-    print(f'| Votos válidos:               |           {validos:<18}  |{porc_validos:>18.2f}%           |')
-    print(f'|------------------------------|-------------------------------|------------------------------|')
-
+    #printando saida de cada municipio
+    print(f"\n{'='*80}")
+    print(f"{'  MUNICÍPIO:':<15}{nome_muni.upper()}")
+    print(f"{'='*80}")
+    print(f"{'  TOTAIS':<30}{'QUANTIDADE':<25}{'PORCENTAGEM':<30}")
+    print(f"{'='*80}")
+    print(f"{'  ELEITORES':<25}{eleitor:^20}{(porc_branco+porc_nulo+porc_validos):>19.2f}%")
+    print(f"{'='*80}")
+    print(f"{'  BRANCOS':<25}{branco:^20}{porc_branco:>19.2f}%")
+    print(f"{'  NULOS':<25}{nulo:^20}{porc_nulo:>19.2f}%")
+    print(f"{'  VÁLIDOS':<25}{validos:^20}{porc_validos:>19.2f}%")
+    print(f"{'='*80}")
+    
 #comparando para achar municipio com MAIS ELEITORES
 if (eleitor1>=eleitor2 
     and eleitor1>=eleitor3
@@ -512,6 +512,7 @@ else:
     mais_validos = (nome_muni10, validos10, porc_validos10)
 
 #printando resumo dos municípios
+
 print(f'|---------------------------------------------------------------------------------------------------------------------------------------------|')
 print(f'|                                                   RESUMO DOS MUNICÍPIOS                                                                     |')
 print(f'|---------------------------------------------------------------------------------------------------------------------------------------------|')
@@ -521,7 +522,7 @@ print(f'| Município mais eleitores:  |              {mais_eleitor[0].upper():<2
 print(f'|----------------------------|--------------------------------------|-----------------------------------|-------------------------------------|')
 print(f'| Mais votos em branco:      |              {mais_branco[0].upper():<21}   |               {mais_branco[1]:<11}         |              {mais_branco[2]:.2f}%                  |')      
 print(f'|----------------------------|--------------------------------------|-----------------------------------|-------------------------------------|')
-print(f'| Mais votos nulos:          |              {mais_nulo[0].upper():<19}     |               {mais_nulo[1]:<7}             |              {mais_nulo[2]:.2f}%                  |')
+print(f'| Mais votos nulos:          |              {mais_nulo[0].upper():<19}     |               {mais_nulo[1]:<7}             |              {mais_nulo[2]:.2f}%                 |')
 print(f'|----------------------------|--------------------------------------|-----------------------------------|-------------------------------------|')
 print(f'| Mais votos válidos:        |              {mais_validos[0].upper():<21}   |               {mais_validos[1]:<11}         |              {mais_validos[2]:.2f}%                 |')
 print(f'|---------------------------------------------------------------------------------------------------------------------------------------------|')
