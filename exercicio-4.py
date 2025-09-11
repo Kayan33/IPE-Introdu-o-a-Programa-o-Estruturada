@@ -526,4 +526,8 @@ print(f"{'  Mais votos nulos':<30}{mais_nulo[0].upper():^40}{mais_nulo[1]:^25}{m
 print(f"{'-'*120}")
 print(f"{'  Mais votos válidos':<30}{mais_validos[0].upper():^40}{mais_validos[1]:^25}{mais_validos[2]:>20.2f}%")
 print(f"{'-'*120}")
+<<<<<<< HEAD
 print(f"{'*'*120}")
+=======
+print(f"{'*'*120}")
+>>>>>>> 31225ac (atualizacao)
