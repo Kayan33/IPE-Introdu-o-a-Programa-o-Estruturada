@@ -1,15 +1,9 @@
-ra = str(input("Digite seu RA: "))
-nome = str(input("Digite seu nome: "))
-curso = str(input("Digite seu curso: "))
-disciplina = str(input("Digite sua disciplina: "))
+NumeroInt = int(input("Digite um número inteiro: "))
 
-nota1 = float(input("Digite sua nota: "))
-nota2 = float(input("Digite sua nota: "))
+print("\n50 números anteriores:")
+for i in range(NumeroInt - 50, NumeroInt +1):
+    print(i, end=" ")
 
-media = (nota1+nota2)/2
-
-if (media >= 7):
-    print(f'Aluno aprovado!\nMédia: {media:.2f}')
-else:
-    print(f'Aluno reprovado!\nmedia: {media:.2f}')
-    
+print("\n\n50 números posteriores:")
+for i in range(NumeroInt, NumeroInt + 51):
+    print(i, end=" ")
